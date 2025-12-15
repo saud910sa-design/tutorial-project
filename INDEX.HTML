@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Saud 3D | متجر المجسمات</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Saud 3D</h1>
+  <nav>
+    <a href="#" onclick="showPage('home')">الرئيسية</a>
+    <a href="#" onclick="showPage('store')">المتجر</a>
+    <a href="#" onclick="showPage('about')">عن المتجر</a>
+  </nav>
+  <div class="cart-btn" onclick="toggleCart()">
+    🛒 السلة
+    <span id="cartCount" class="cart-count">0</span>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    <div>
+      <h2>مجسمات ثلاثية الأبعاد باحتراف</h2>
+      <p>متجر Saud 3D يقدم تصاميم مطبوعة ثلاثيًا بجودة عالية – مشروع تعليمي يحاكي المتاجر العالمية.</p>
+      <button onclick="showPage('store')">استعرض المنتجات</button>
+    </div>
+    <img src="assets/imgs/3d-printing logo.png">
+  </div>
+</section>
+
+<!-- STORE -->
+<section id="store" class="page">
+  <h2>المنتجات</h2>
+  <div class="products">
+    <div class="product" onclick="openProduct(this)">
+      <img src="assets/imgs/3333.webp">
+      <h3>مجسم تنين</h3>
+      <div class="price">120 ر.س</div>
+      <button>عرض المنتج</button>
+    </div>
+
+    <div class="product" onclick="openProduct(this)">
+      <img src="assets/imgs/541A4520-2.webp">
+      <h3>مجسم روبوت</h3>
+      <div class="price">95 ر.س</div>
+      <button>عرض المنتج</button>
+    </div>
+
+    <div class="product" onclick="openProduct(this)">
+      <img src="assets/imgs/1.webp">
+      <h3>مجسم جمجمة</h3>
+      <div class="price">60 ر.س</div>
+      <button>عرض المنتج</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product" class="page">
+  <div class="product-page">
+    <img id="p-img">
+    <div>
+      <h2 id="p-name"></h2>
+      <div id="p-price" class="price"></div>
+      <p>مجسم مطبوع بتقنية ثلاثية الأبعاد – هذا المتجر لغرض تعليمي فقط.</p>
+      <div class="actions">
+        <button class="add" onclick="addToCart()">إضافة للسلة</button>
+        <button class="buy">شراء (غير مفعل)</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <h2>عن Saud 3D</h2>
+  <p style="margin-top:15px">Saud 3D هو مشروع تعليمي لمحاكاة متجر إلكتروني كبير باستخدام HTML و CSS و JavaScript.</p>
+</section>
+
+</main>
+
+<div class="cart" id="cart">
+  <div class="cart-header">
+    <h3>السلة</h3>
+    <button class="close-cart-btn" onclick="toggleCart()">X</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="total" id="total">الإجمالي: 0 ر.س</div>
+</div>
+
+<footer>© 2025 Saud 3D – Educational Project</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
